@@ -1,0 +1,1225 @@
+.clear:before, .clear:after {
+  content: ' ';
+  display: table; }
+
+.clear {
+  *zoom: 1; }
+  .clear:after {
+    clear: both; }
+
+* {
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+
+body {
+  font-family: 'Titillium Web';
+  color: #444;
+  transition: all .4s .3s ease-in; }
+
+body, html {
+  min-height: 100vh; }
+
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+template,
+[hidden] {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+a:active,
+a:hover {
+  outline-width: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+optgroup {
+  font-weight: bold; }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+.header {
+  height: 93px;
+  max-width: 1280px;
+  margin: 0 auto; }
+
+.logo {
+  float: left;
+  position: relative;
+  top: 56px;
+  margin-left: 42px; }
+  .logo img {
+    width: 118px;
+    height: 36px; }
+
+.section-nav ul {
+  list-style-type: none;
+  padding: 0;
+  padding-top: 30px;
+  overflow: hidden;
+  width: 380px;
+  margin: 0 auto; }
+
+.section-nav li {
+  float: left;
+  margin: 0 5px; }
+  .section-nav li a {
+    display: inline-block;
+    color: #393939;
+    text-align: center;
+    padding: 7px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.078);
+    width: 82px;
+    height: 38px;
+    vertical-align: middle; }
+  .section-nav li a:hover:not(.active) {
+    background-color: #ffffff; }
+  .section-nav li a.active {
+    background-color: #ffffff; }
+
+.welcome {
+  color: #fff;
+  width: 100%;
+  margin: 0 auto;
+  height: 160px;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px; }
+
+.greeting {
+  max-width: 620px;
+  margin: 0 auto; }
+  .greeting h2 {
+    text-align: center; }
+
+.section-header {
+  text-align: center; }
+  .section-header h2 {
+    margin: 0;
+    color: white;
+    padding-bottom: 21px; }
+
+.header-line {
+  width: 87px;
+  height: 4px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.15);
+  margin-bottom: 21px; }
+
+.section-item {
+  width: 25%;
+  height: 507px;
+  text-align: center;
+  float: left;
+  padding: 70px 32px;
+  box-sizing: border-box; }
+
+.l-section-items {
+  max-width: 1280px;
+  margin: 0 auto; }
+
+.footer {
+  height: 112px;
+  background-color: #344b8e; }
+
+.nav-social {
+  margin: 0 auto;
+  position: relative;
+  top: 35px;
+  max-width: 1280px; }
+
+.footer-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 4%;
+  overflow: hidden;
+  float: left;
+  width: 100%; }
+  .footer-nav li {
+    display: inline-block;
+    width: 13.9%; }
+    .footer-nav li a {
+      display: block;
+      color: #fff;
+      text-align: center;
+      padding: 2px 4px;
+      text-decoration: none;
+      border-radius: 3px; }
+    .footer-nav li a.active {
+      color: #30bae7; }
+
+.l-content {
+  padding: 80px 0;
+  min-height: 100vh; }
+  .l-content--form {
+    background-color: #3c5499;
+    color: white; }
+  .l-content--services {
+    background-color: #17c2a4;
+    color: white; }
+  .l-content--team {
+    background-color: #e7f1f8;
+    color: #3c4661; }
+  .l-content--skills {
+    background-color: #ffffff;
+    color: #3c4661; }
+  .l-content--portfolio {
+    background-color: #ffdd99;
+    color: #393939; }
+  .l-content--about {
+    background-color: #d74680;
+    color: white; }
+
+.l-container {
+  max-width: 1280px;
+  margin: 0 auto; }
+
+.section-title--mb-form {
+  margin-bottom: 110px; }
+
+.section-title__header {
+  text-align: center; }
+  .section-title__header h2 {
+    margin: 0;
+    padding-bottom: 21px; }
+
+.section-title__line {
+  width: 87px;
+  height: 4px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.15);
+  margin-bottom: 21px; }
+
+.section-title__info {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto; }
+
+.contact-form__input-text--main {
+  border: 0;
+  border-radius: 4px;
+  background-color: #273a71;
+  color: white;
+  height: 56px;
+  width: 47.7%;
+  margin: 0 0 32px 0;
+  padding: 0 20px;
+  box-sizing: border-box; }
+
+.contact-form__input-text--main:-ms-input-placeholder::after {
+  content: '*';
+  color: red; }
+
+.contact-form__input-text--main::placeholder::after {
+  content: '*';
+  color: red; }
+
+.contact-form__input-text--main-fr {
+  float: right; }
+
+.contact-form__input-text--main-fl {
+  float: left; }
+
+.contact-form__textarea--main {
+  display: block;
+  border: 0;
+  border-radius: 4px;
+  background-color: #273a71;
+  color: white;
+  width: 100%;
+  height: 200px;
+  padding: 0 20px;
+  margin-bottom: 50px;
+  box-sizing: border-box; }
+
+.contact-form__textarea--main:-ms-input-placeholder::after {
+  content: '*';
+  color: red; }
+
+.contact-form__textarea--main::placeholder::after {
+  content: '*';
+  color: red; }
+
+.l-input-form {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 10px; }
+
+.btn {
+  display: block;
+  width: 293px;
+  height: 70px;
+  margin: 0 auto;
+  border-radius: 5px;
+  outline: 0 !important;
+  border: none;
+  text-transform: uppercase; }
+  .btn--form-color {
+    background-color: #30bae7;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.15);
+    color: white; }
+  .btn--welcome-color {
+    background-color: #eb7d4b;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.15);
+    color: white; }
+  .btn--portfolio-color {
+    background-color: #17c2a4;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.15);
+    color: white; }
+
+.btn:hover {
+  font-size: 1.1em;
+  cursor: pointer; }
+
+.section-content {
+  display: inline-block;
+  box-sizing: border-box;
+  margin-bottom: 20px; }
+  .section-content--portfolio {
+    width: 49.8%; }
+    .section-content--portfolio img {
+      max-width: 80%;
+      height: auto;
+      display: block;
+      margin: 0 auto; }
+    .section-content--portfolio p {
+      text-align: center; }
+  .section-content--services {
+    width: 24.7%;
+    text-align: center;
+    padding: 0 30px; }
+    .section-content--services img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto; }
+  .section-content--team {
+    width: 24.7%;
+    text-align: center;
+    padding: 0 30px; }
+    .section-content--team img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto; }
+  .section-content--skills {
+    width: 24.7%;
+    text-align: center;
+    padding: 0 20px; }
+    .section-content--skills .l-chart-skills {
+      width: 234px;
+      margin: 0 auto; }
+  .section-content--about {
+    display: block;
+    float: left;
+    width: 49.8%;
+    text-align: left;
+    padding: 0 30px; }
+    .section-content--about img {
+      max-width: 100px;
+      height: auto;
+      float: left;
+      margin-right: 5%; }
+    .section-content--about span {
+      max-width: 330px;
+      width: 64%;
+      display: inline-block; }
+      .section-content--about span h4 {
+        margin-bottom: 0; }
+      .section-content--about span p {
+        max-width: 330px;
+        margin: 0; }
+
+.section-social-nav {
+  padding: 0; }
+  .section-social-nav__fb {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block; }
+    .section-social-nav__fb a {
+      width: 35px;
+      height: 35px;
+      display: block;
+      background-image: url("/assets/img/social_sprite.png");
+      background-repeat: no-repeat; }
+  .section-social-nav__tw {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block; }
+    .section-social-nav__tw a {
+      width: 35px;
+      height: 35px;
+      display: block;
+      background-image: url("/assets/img/social_sprite.png");
+      background-repeat: no-repeat;
+      background-position: -43px 0; }
+  .section-social-nav__in {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block; }
+    .section-social-nav__in a {
+      width: 35px;
+      height: 35px;
+      display: block;
+      background-image: url("/assets/img/social_sprite.png");
+      background-repeat: no-repeat;
+      background-position: -86px 0; }
+  .section-social-nav__mail {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block; }
+    .section-social-nav__mail a {
+      width: 35px;
+      height: 35px;
+      display: block;
+      background-image: url("/assets/img/social_sprite.png");
+      background-repeat: no-repeat;
+      background-position: -129px 0; }
+
+.chart-wd {
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  position: relative; }
+  .chart-wd.animate svg .circle-foreground {
+    animation: offset 3s ease-in-out forwards;
+    animation-delay: 1s; }
+  .chart-wd.animate figcaption:after {
+    animation: chart-wd-label 3s steps(90) forwards;
+    animation-delay: 1s; }
+  .chart-wd svg {
+    width: 100%;
+    height: 100%; }
+    .chart-wd svg .circle-background, .chart-wd svg .circle-foreground {
+      r: 92.5px;
+      cx: 50%;
+      cy: 50%;
+      fill: none;
+      stroke: #dfe8ed;
+      stroke-width: 15px; }
+    .chart-wd svg .circle-foreground {
+      stroke: #30bae7;
+      stroke-dasharray: 522.81px 580.9px;
+      stroke-dashoffset: 522.81px;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg); }
+  .chart-wd figcaption {
+    display: inline-block;
+    width: 100%;
+    height: 3.5rem;
+    overflow: hidden;
+    text-align: center;
+    color: #3c4761;
+    position: absolute;
+    top: calc(50% - 1.75rem);
+    left: 0;
+    font-size: 0; }
+    .chart-wd figcaption:after {
+      display: inline-block;
+      content: "0%\a 1%\a 2%\a 3%\a 4%\a 5%\a 6%\a 7%\a 8%\a 9%\a 10%\a 11%\a 12%\a 13%\a 14%\a 15%\a 16%\a 17%\a 18%\a 19%\a 20%\a 21%\a 22%\a 23%\a 24%\a 25%\a 26%\a 27%\a 28%\a 29%\a 30%\a 31%\a 32%\a 33%\a 34%\a 35%\a 36%\a 37%\a 38%\a 39%\a 40%\a 41%\a 42%\a 43%\a 44%\a 45%\a 46%\a 47%\a 48%\a 49%\a 50%\a 51%\a 52%\a 53%\a 54%\a 55%\a 56%\a 57%\a 58%\a 59%\a 60%\a 61%\a 62%\a 63%\a 64%\a 65%\a 66%\a 67%\a 68%\a 69%\a 70%\a 71%\a 72%\a 73%\a 74%\a 75%\a 76%\a 77%\a 78%\a 79%\a 80%\a 81%\a 82%\a 83%\a 84%\a 85%\a 86%\a 87%\a 88%\a 89%\a 90%\a 91%\a 92%\a 93%\a 94%\a 95%\a 96%\a 97%\a 98%\a 99%\a 100%\a";
+      white-space: pre;
+      font-size: 3.5rem;
+      line-height: 3.5rem; }
+
+@keyframes chart-wd-label {
+  100% {
+    transform: translateY(-315rem); } }
+
+.chart-html {
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  position: relative; }
+  .chart-html.animate svg .circle-foreground {
+    animation: offset 3s ease-in-out forwards;
+    animation-delay: 1s; }
+  .chart-html.animate figcaption:after {
+    animation: chart-html-label 3s steps(75) forwards;
+    animation-delay: 1s; }
+  .chart-html svg {
+    width: 100%;
+    height: 100%; }
+    .chart-html svg .circle-background, .chart-html svg .circle-foreground {
+      r: 92.5px;
+      cx: 50%;
+      cy: 50%;
+      fill: none;
+      stroke: #dfe8ed;
+      stroke-width: 15px; }
+    .chart-html svg .circle-foreground {
+      stroke: #d74680;
+      stroke-dasharray: 435.675px 580.9px;
+      stroke-dashoffset: 435.675px;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg); }
+  .chart-html figcaption {
+    display: inline-block;
+    width: 100%;
+    height: 3.5rem;
+    overflow: hidden;
+    text-align: center;
+    color: #3c4761;
+    position: absolute;
+    top: calc(50% - 1.75rem);
+    left: 0;
+    font-size: 0; }
+    .chart-html figcaption:after {
+      display: inline-block;
+      content: "0%\a 1%\a 2%\a 3%\a 4%\a 5%\a 6%\a 7%\a 8%\a 9%\a 10%\a 11%\a 12%\a 13%\a 14%\a 15%\a 16%\a 17%\a 18%\a 19%\a 20%\a 21%\a 22%\a 23%\a 24%\a 25%\a 26%\a 27%\a 28%\a 29%\a 30%\a 31%\a 32%\a 33%\a 34%\a 35%\a 36%\a 37%\a 38%\a 39%\a 40%\a 41%\a 42%\a 43%\a 44%\a 45%\a 46%\a 47%\a 48%\a 49%\a 50%\a 51%\a 52%\a 53%\a 54%\a 55%\a 56%\a 57%\a 58%\a 59%\a 60%\a 61%\a 62%\a 63%\a 64%\a 65%\a 66%\a 67%\a 68%\a 69%\a 70%\a 71%\a 72%\a 73%\a 74%\a 75%\a 76%\a 77%\a 78%\a 79%\a 80%\a 81%\a 82%\a 83%\a 84%\a 85%\a 86%\a 87%\a 88%\a 89%\a 90%\a 91%\a 92%\a 93%\a 94%\a 95%\a 96%\a 97%\a 98%\a 99%\a 100%\a";
+      white-space: pre;
+      font-size: 3.5rem;
+      line-height: 3.5rem; }
+
+@keyframes chart-html-label {
+  100% {
+    transform: translateY(-262.5rem); } }
+
+.chart-gd {
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  position: relative; }
+  .chart-gd.animate svg .circle-foreground {
+    animation: offset 3s ease-in-out forwards;
+    animation-delay: 1s; }
+  .chart-gd.animate figcaption:after {
+    animation: chart-gd-label 3s steps(70) forwards;
+    animation-delay: 1s; }
+  .chart-gd svg {
+    width: 100%;
+    height: 100%; }
+    .chart-gd svg .circle-background, .chart-gd svg .circle-foreground {
+      r: 92.5px;
+      cx: 50%;
+      cy: 50%;
+      fill: none;
+      stroke: #dfe8ed;
+      stroke-width: 15px; }
+    .chart-gd svg .circle-foreground {
+      stroke: #15c7a8;
+      stroke-dasharray: 406.63px 580.9px;
+      stroke-dashoffset: 406.63px;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg); }
+  .chart-gd figcaption {
+    display: inline-block;
+    width: 100%;
+    height: 3.5rem;
+    overflow: hidden;
+    text-align: center;
+    color: #3c4761;
+    position: absolute;
+    top: calc(50% - 1.75rem);
+    left: 0;
+    font-size: 0; }
+    .chart-gd figcaption:after {
+      display: inline-block;
+      content: "0%\a 1%\a 2%\a 3%\a 4%\a 5%\a 6%\a 7%\a 8%\a 9%\a 10%\a 11%\a 12%\a 13%\a 14%\a 15%\a 16%\a 17%\a 18%\a 19%\a 20%\a 21%\a 22%\a 23%\a 24%\a 25%\a 26%\a 27%\a 28%\a 29%\a 30%\a 31%\a 32%\a 33%\a 34%\a 35%\a 36%\a 37%\a 38%\a 39%\a 40%\a 41%\a 42%\a 43%\a 44%\a 45%\a 46%\a 47%\a 48%\a 49%\a 50%\a 51%\a 52%\a 53%\a 54%\a 55%\a 56%\a 57%\a 58%\a 59%\a 60%\a 61%\a 62%\a 63%\a 64%\a 65%\a 66%\a 67%\a 68%\a 69%\a 70%\a 71%\a 72%\a 73%\a 74%\a 75%\a 76%\a 77%\a 78%\a 79%\a 80%\a 81%\a 82%\a 83%\a 84%\a 85%\a 86%\a 87%\a 88%\a 89%\a 90%\a 91%\a 92%\a 93%\a 94%\a 95%\a 96%\a 97%\a 98%\a 99%\a 100%\a";
+      white-space: pre;
+      font-size: 3.5rem;
+      line-height: 3.5rem; }
+
+@keyframes chart-gd-label {
+  100% {
+    transform: translateY(-245rem); } }
+
+.chart-ui {
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  position: relative; }
+  .chart-ui.animate svg .circle-foreground {
+    animation: offset 3s ease-in-out forwards;
+    animation-delay: 1s; }
+  .chart-ui.animate figcaption:after {
+    animation: chart-ui-label 3s steps(85) forwards;
+    animation-delay: 1s; }
+  .chart-ui svg {
+    width: 100%;
+    height: 100%; }
+    .chart-ui svg .circle-background, .chart-ui svg .circle-foreground {
+      r: 92.5px;
+      cx: 50%;
+      cy: 50%;
+      fill: none;
+      stroke: #dfe8ed;
+      stroke-width: 15px; }
+    .chart-ui svg .circle-foreground {
+      stroke: #eb7d4b;
+      stroke-dasharray: 493.765px 580.9px;
+      stroke-dashoffset: 493.765px;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg); }
+  .chart-ui figcaption {
+    display: inline-block;
+    width: 100%;
+    height: 3.5rem;
+    overflow: hidden;
+    text-align: center;
+    color: #3c4761;
+    position: absolute;
+    top: calc(50% - 1.75rem);
+    left: 0;
+    font-size: 0; }
+    .chart-ui figcaption:after {
+      display: inline-block;
+      content: "0%\a 1%\a 2%\a 3%\a 4%\a 5%\a 6%\a 7%\a 8%\a 9%\a 10%\a 11%\a 12%\a 13%\a 14%\a 15%\a 16%\a 17%\a 18%\a 19%\a 20%\a 21%\a 22%\a 23%\a 24%\a 25%\a 26%\a 27%\a 28%\a 29%\a 30%\a 31%\a 32%\a 33%\a 34%\a 35%\a 36%\a 37%\a 38%\a 39%\a 40%\a 41%\a 42%\a 43%\a 44%\a 45%\a 46%\a 47%\a 48%\a 49%\a 50%\a 51%\a 52%\a 53%\a 54%\a 55%\a 56%\a 57%\a 58%\a 59%\a 60%\a 61%\a 62%\a 63%\a 64%\a 65%\a 66%\a 67%\a 68%\a 69%\a 70%\a 71%\a 72%\a 73%\a 74%\a 75%\a 76%\a 77%\a 78%\a 79%\a 80%\a 81%\a 82%\a 83%\a 84%\a 85%\a 86%\a 87%\a 88%\a 89%\a 90%\a 91%\a 92%\a 93%\a 94%\a 95%\a 96%\a 97%\a 98%\a 99%\a 100%\a";
+      white-space: pre;
+      font-size: 3.5rem;
+      line-height: 3.5rem; }
+
+@keyframes chart-ui-label {
+  100% {
+    transform: translateY(-297.5rem); } }
+
+@keyframes offset {
+  100% {
+    stroke-dashoffset: 0; } }
+
+figure {
+  margin: 1rem !important; }
+
+.btn {
+  display: block;
+  width: 293px;
+  height: 70px;
+  margin: 0 auto;
+  border-radius: 5px;
+  outline: 0 !important;
+  border: none;
+  border-bottom: 5px solid #cc6633;
+  background-color: #ff6633;
+  text-transform: uppercase; }
+
+.btn:hover {
+  font-size: 1.1em;
+  cursor: pointer; }
+
+.btn-welcome-color {
+  color: white; }
+
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/titillium-web-v6-latin-regular.eot");
+  src: local("Titillium Web Regular"), local("TitilliumWeb-Regular"), url("../fonts/titillium-web-v6-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/titillium-web-v6-latin-regular.woff2") format("woff2"), url("../fonts/titillium-web-v6-latin-regular.woff") format("woff"), url("../fonts/titillium-web-v6-latin-regular.ttf") format("truetype"), url("../fonts/titillium-web-v6-latin-regular.svg#TitilliumWeb") format("svg"); }
+
+::-moz-selection {
+  background: #333;
+  color: #fff;
+  text-shadow: none; }
+
+::selection {
+  background: #333;
+  color: #fff;
+  text-shadow: none; }
+
+::-moz-selection {
+  background: #333;
+  color: #fff;
+  text-shadow: none; }
+
+::-webkit-selection {
+  background: #333;
+  color: #fff;
+  text-shadow: none; }
+
+.l-welcome {
+  background-color: #87509c;
+  min-height: 450px;
+  height: 100vh;
+  position: relative;
+  color: white; }
+
+.l-services {
+  padding: 80px 0;
+  background-color: #00cc99;
+  min-height: 450px;
+  color: white; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+@media only screen and (min-width: 320px) {
+  .section-content--services {
+    width: 100%; }
+  .section-content--team {
+    width: 100%; }
+  .section-content--skills {
+    width: 100%; }
+  .section-content--portfolio {
+    width: 100%; }
+  .section-content--about {
+    width: 100%; }
+  .section-content .l-container {
+    padding: 0 5px;
+    box-sizing: border-box; }
+  .contact-form__input-text--main {
+    width: 100%; } }
+
+@media only screen and (min-width: 520px) {
+  .section-content--skills {
+    width: 49%; }
+  .l-container {
+    max-width: 560px; } }
+
+@media only screen and (min-width: 768px) {
+  .section-content--services {
+    width: 49%; }
+  .section-content--team {
+    width: 49%; }
+  .section-content--skills {
+    width: 49%; }
+  .section-content--portfolio {
+    width: 49%; }
+  .section-content--about {
+    width: 49.8%; }
+  .contact-form__input-text--main {
+    width: 47.7%; }
+  .l-container {
+    max-width: 760px; }
+  .navbar-checkbox {
+    display: none; }
+  .navbar {
+    position: relative;
+    top: 65px; }
+  .topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: right; }
+    .topnav li {
+      float: left; }
+      .topnav li a {
+        display: block;
+        color: #fff;
+        text-align: center;
+        padding: 2px 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 3px; }
+      .topnav li a:hover:not(.active) {
+        background-color: #663366; }
+      .topnav li a.active {
+        background-color: #663366; } }
+
+@media only screen and (min-width: 1024px) {
+  .l-container {
+    max-width: 960px; }
+  .section-content--skills {
+    width: 24.7%; } }
+
+@media only screen and (min-width: 1140px) {
+  .section-content--services {
+    width: 24.7%; }
+  .section-content--team {
+    width: 24.7%; } }
+
+@media only screen and (min-width: 1280px) {
+  .l-container {
+    max-width: 1140px; } }
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+     -ms-user-select: none;
+         user-select: none; }
+    .navbar a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s ease; }
+    .navbar a:hover {
+      color: #bbbb; }
+  .navbar input {
+    margin-left: 80%;
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: 14px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none; }
+  .navbar span {
+    margin-left: 80%;
+    top: 20px;
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #ffffff;
+    border-radius: 3px;
+    z-index: 1;
+    -ms-transform-origin: 4px 0px;
+        transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
+  .navbar span:first-child {
+    -ms-transform-origin: 0% 0%;
+        transform-origin: 0% 0%; }
+  .navbar span:nth-last-child(2) {
+    -ms-transform-origin: 0% 100%;
+        transform-origin: 0% 100%; }
+  .navbar input:checked ~ span {
+    opacity: 1;
+    -ms-transform: rotate(45deg) translate(-2px, -1px);
+        transform: rotate(45deg) translate(-2px, -1px);
+    background: #ffffff; }
+  .navbar input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    -ms-transform: rotate(0deg) scale(0.2, 0.2);
+        transform: rotate(0deg) scale(0.2, 0.2); }
+  .navbar input:checked ~ span:nth-last-child(2) {
+    -ms-transform: rotate(-45deg) translate(0, -1px);
+        transform: rotate(-45deg) translate(0, -1px); }
+  .topnav {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #572a57;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    -ms-transform-origin: 0% 0%;
+        transform-origin: 0% 0%;
+    -ms-transform: translate(-100%, 0);
+        transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
+  .topnav li {
+    padding: 10px 0;
+    font-size: 22px; }
+  .navbar input:checked ~ ul {
+    -ms-transform: none;
+        transform: none; } }
+
+@media only screen and (max-width: 870px) {
+  .footer {
+    height: auto; }
+  .nav-social {
+    top: 0px; }
+  .footer-nav {
+    float: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; }
+    .footer-nav li {
+      display: block;
+      width: 100%; }
+      .footer-nav li a {
+        width: 150px;
+        margin: 0 auto; } }
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  a,
+  a:visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  thead {
+    display: table-header-group; }
+  tr,
+  img {
+    page-break-inside: avoid; }
+  img {
+    max-width: 100% !important; }
+  @page {
+    margin: 0.5cm; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  h2,
+  h3 {
+    page-break-after: avoid; } }
