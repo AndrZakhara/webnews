@@ -122,3 +122,126 @@ nav{
     }
   }
 }
+
+.acordion-btns{
+	display: none;
+}
+.acordion-btns:checked ~ .submenu-accordion{
+	display: block;
+}
+.acordion-btns:checked + label>a{
+	&:before{
+		transform: rotate(90deg) translate(-80%,-50%);
+	}
+}
+a.acordion-btns-main{
+	position: relative;
+	cursor: pointer;
+	font-size: 12px;
+	&:before{
+		position: absolute;
+		top: 50%;
+		right: 26px;
+		transform: translate(0,-50%);
+	}
+}
+.nav-sidebar{
+  width: 25%;
+  min-width: 243px;
+	height: 100%;
+	font-size: 12px;
+  // padding-top: 40px;
+  // background-color: red;
+  li {
+    outline: none;
+    a {
+      outline: none;
+      text-decoration: none;
+    }    
+  }
+	h2{
+		font-size: 18px;
+		color: #212121;
+		line-height: 40px;
+		text-indent: 10px;
+		background: linear-gradient(-45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.2) 50%,rgba(0, 0, 0, 0) 52%);
+  		background-size: 10px 10px;
+  		background-color: #fff;
+	}
+	ul{
+    // width: 400px;
+    padding-left: 0;
+    list-style-type: none;
+		li.active{
+			background: #ae3b44;
+			position: relative;
+			&:before{
+				content: '';
+				position: absolute;
+				bottom: 50%;
+				left: 100%;
+				transform: translate(0%, 50%);
+				z-index: 9;
+				width: 0;
+				height: 0;
+				border: 5px solid transparent;
+				border-left: 5px solid #ae3b44;
+				transition: .3s linear;
+			}
+			a{
+        color: #fff;
+        
+				&:hover{
+					color: #fff;
+				}
+			}
+		}
+		li{
+			line-height: 39px;
+			border-bottom: 1px solid #ccc;
+			a{
+				text-indent: 7px;
+				width: 100%;
+				color: #212121;
+				text-transform: capitalize;
+				transition: .3s linear;
+				&:before{
+					
+					display: inline-block;
+				}
+				&:hover{
+					color: #ae3b44;
+
+				}
+			}
+			.submenu-accordion{
+				width: 100%;
+				display: none;
+				background: #f4f7f8;
+				li{
+					text-indent: 25px;
+					border-bottom: 1px solid #ccc;
+					a{
+						text-indent: 10px;
+						&:before{
+							margin-right: 12px;
+							display: inline-block;
+						}
+					}
+				}
+				li:first-child{
+					border-top: 1px solid #ccc;
+				}
+				li:last-child{
+					border-bottom: none;
+				}
+			}
+			.under-submenu-accordion{
+				background: #eaeaea;
+				li{
+					text-indent: 20px;
+				}
+			}
+    }
+  }
+}

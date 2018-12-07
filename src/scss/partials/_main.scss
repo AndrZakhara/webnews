@@ -1,11 +1,13 @@
 main {
     display: flex;
-    // flex-direction: column;    
+    flex-direction: column;    
 }
-.menu-sidebar {
-    width: 300px
-}
+.nav-sidebar {}
 .news-content {
     display: flex;
+}
+.wrapper-content-main {
+    // padding-top: 60px;
+    padding-left: 30px;
 }
 
