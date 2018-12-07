@@ -4,10 +4,14 @@
   text-rendering: optimizeLegibility;
 }
 body {
-  font-family: 'Titillium Web';
+  font-family: 'Arial';
   color: #444;
   transition: all .4s .3s ease-in;
 }
 body, html {
   min-height: 100vh;
+}
+header, footer, main {
+  margin: 0;
+  padding: 0;
 }

@@ -1,18 +1,11 @@
-.l-welcome {
-  background-color: #87509c;
-  min-height: 450px;
-  height: 100vh;
-  position: relative;
-  color: white;
+.wrapper {
+  max-width: 980px;
+  min-height: 100%;
+  margin: 0 auto;
 }
-.l-services {
-  padding: 80px 0;
-  background-color: #00cc99;
-  min-height: 450px;
-  color: white;
-}
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+.header-wrapper {
+  height: 122px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
