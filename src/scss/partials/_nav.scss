@@ -1,3 +1,11 @@
+a {
+  display: inline-block
+}
+
+a, a:hover {
+  text-decoration: none
+}
+
 nav{
   width: 51%;
   // margin-right: 10px;
@@ -157,7 +165,7 @@ a.acordion-btns-main{
     a {
       outline: none;
       text-decoration: none;
-    }    
+    }
   }
 	h2{
 		font-size: 18px;
@@ -165,7 +173,7 @@ a.acordion-btns-main{
 		line-height: 40px;
 		text-indent: 10px;
 		background: linear-gradient(-45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.2) 50%,rgba(0, 0, 0, 0) 52%);
-  		background-size: 10px 10px;
+  		background-size: 13px 13px;
   		background-color: #fff;
 	}
 	ul{
@@ -190,7 +198,7 @@ a.acordion-btns-main{
 			}
 			a{
         color: #fff;
-        
+
 				&:hover{
 					color: #fff;
 				}
@@ -206,7 +214,7 @@ a.acordion-btns-main{
 				text-transform: capitalize;
 				transition: .3s linear;
 				&:before{
-					
+
 					display: inline-block;
 				}
 				&:hover{
