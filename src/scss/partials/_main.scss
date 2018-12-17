@@ -3,15 +3,16 @@ main {
   flex-direction: column;
 }
 
-.nav-sidebar {
-}
-
 .news-content {
   display: flex;
 }
 
 .wrapper-content-main {
   padding-left: 30px;
+  position: relative;
+  border-left: 1px solid #c6c6c6;
+  padding-bottom: 60px;
+
 }
 
 .featured-news-slider-item {
@@ -141,6 +142,7 @@ a.acordion-btns-main:before {
   align-items: flex-start
 }
 
+
 .content-news-article-title h3 {
   color: #212121;
   font-size: 24px;
@@ -151,8 +153,8 @@ a.acordion-btns-main:before {
 }
 
 .content-news-article-title .date-article {
-  background: linear-gradient(-45deg, transparent 48%, rgba(0, 0, 0, .2) 50%, transparent 52%);
-  background-size: 13px 13px;
+  background: linear-gradient(-45deg, transparent 48%, rgba(0, 0, 0, .12) 50%, transparent 52%);
+  background-size: 15px 15px;
   background-color: #fff;
   font-size: 10px;
   text-transform: uppercase;
@@ -168,17 +170,21 @@ a.acordion-btns-main:before {
   line-height: 25px
 }
 
-.content-news-article-text h4 {
+.content-news-article-text {
+  margin-bottom: 40px;
+}
+  h4 {
   font-size: 15px;
   color: #ae3b44;
-  margin-bottom: 20px
+  margin-bottom: 40px;
 }
 
 .content-news-article-text p {
   font-size: 12px;
   line-height: 20px;
   margin-bottom: 30px;
-  word-spacing: .6px
+  word-spacing: .6px;
+  text-align: justify;
 }
 
 .content-news-article-text .second-part-article-content {
@@ -203,7 +209,9 @@ a.acordion-btns-main:before {
   float: left;
   padding: 20px 20px 20px 0
 }
-
+//.content-news-article {
+//  position: relative;
+//}
 .btns-news-wrapper {
   position: absolute;
   bottom: 23px;
@@ -213,14 +221,15 @@ a.acordion-btns-main:before {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  p {
+    padding: 0 20px;
+  }
 
   span {
     cursor: pointer;
     display: flex;
     align-items: center;
-    svg {
-      padding-right: 20px
-    }
+    padding: 0 10px;
   }
   span:hover {
     color: #ae3b44
@@ -229,6 +238,15 @@ a.acordion-btns-main:before {
     display: inline-block;
     transform: rotate(180deg)
   }
+}
+
+.content-img-left {
+  float: left;
+  padding: 20px 20px 20px 0;
+}
+
+.content-news-article-text h4 {
+  margin-bottom: 20px;
 }
 
 
